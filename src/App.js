@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
-import Tickers from  './components/Tickers';
+import Tickers from './components/Tickers';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
         <div className="App-header">
-          <h2>Cryptocurrency Ticker</h2>
+          <div className="app-header">
+            <h1>THÔNG TIN TIỀN ẢO HÔM NAY</h1>
+          </div>
         </div>
-        <Tickers/>
-      </div>
+
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <Tickers />
+          </div>
+        </div>
+        <div className="footer">
+          <p>Copyright &copy; {new Date().getFullYear()} vp</p>
+        </div>
+
+      </React.Fragment>
     );
   }
 }
